@@ -1,0 +1,30 @@
+html{
+    background: white;
+}
+body{
+    background: antiquewhite;
+    width: min(100%, 60rem);
+    margin-inline: auto;
+}
+.lista{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.kartya{
+    font-size: 1.2rem;
+    min-width: 20rem;
+    text-align: center;
+    background: cornflowerblue;
+    padding-block-end:1rem;
+    border: 3px solid darkblue;
+    margin-block: .4em;
+}
+.hofok{
+    font-size: 1.2em;
+    font-weight: bold;
+    background: darkblue;
+    color: white;
+    padding-block: .2em;
+}
