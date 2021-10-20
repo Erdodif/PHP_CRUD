@@ -1,6 +1,9 @@
 <?php 
 require_once "DB.php";
 require_once "Elorejelzes.php";
+if ($_POST["action"]??null === "create"){
+    //TODO
+}
 ?>
 <!DOCTYPE html>
 <html lang="hu">

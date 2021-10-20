@@ -43,6 +43,7 @@ class Elorejelzes{
         }
         return "
         <form method='POST'>
+            <input type='hidden' name='action' value='create'>
             <span class='hofok'><input type='text' name='hofok' placeholder='10' value='$hofok'> C°</span>
             <input type='date' name='datum' value='$datum'>
             <input type='text' name='leiras' placeholder='Leírás'value='$leiras'>
