@@ -16,12 +16,6 @@ require_once "Elorejelzes.php";
         <?php
             echo Elorejelzes::form();
         ?>
-        <form>
-            <input type="text" name="hofok" placeholder="10"> C°
-            <input type="date" name="datum">
-            <input type="text" name="leiras" placeholder="Leírás">
-            <input type="submit" value="Feltölt">
-        </form>
     </div>
     <div class="lista">
         <?php
@@ -31,8 +25,6 @@ require_once "Elorejelzes.php";
                 $ki.= $elem->kartya();
             }
             echo $ki;
-            echo Elorejelzes::getById(1)->kartya();
-        
         ?>
     </div>
 </body>

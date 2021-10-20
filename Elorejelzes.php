@@ -29,7 +29,7 @@ class Elorejelzes{
         return $this->hofok;
     }
 
-    public static function form($elem = null) :string{
+    public static function form(?Elorejelzes $elem = null) :string{
         if($elem !== null){
             $id = $this->getId();
             $hofok = $this->getHofok();
@@ -41,7 +41,14 @@ class Elorejelzes{
             $datum = "";
             $leiras = "";
         }
-        return "";
+        return "
+        <form method='POST'>
+            <span class='hofok'><input type='text' name='hofok' placeholder='10' value='$hofok'> C°</span>
+            <input type='date' name='datum' value='$datum'>
+            <input type='text' name='leiras' placeholder='Leírás'value='$leiras'>
+            <input type='submit' value='Feltölt'>
+        </form>
+        ";
     }
 
     public function kartya() : string{
@@ -50,7 +57,7 @@ class Elorejelzes{
         $datum = $this->getDatum();
         $leiras = $this->getLeiras();
         return "
-        <div class='kartya' id='w_$id'>
+        <a class='kartya' href='edit.php?id=$id'>
             <div class='hofok'>
                 $hofok C°
             </div>
@@ -60,7 +67,7 @@ class Elorejelzes{
             <div class='leiras'>
                 $leiras
             </div>
-        </div>
+        </a>
         ";
     }
 
